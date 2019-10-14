@@ -1,5 +1,7 @@
-# React Card Carousel [(Github)](https://github.com/TomorrowIdeas/react-card-carousel)
+# React Card Carousel
 A simple React carousel.
+* <a href="https://github.com/TomorrowIdeas/react-card-carousel" target="_blank">GitHub</a>
+* <a href="https://codesandbox.io/s/react-card-carousel-0gib5" target="_blank">Demo</a>
 
 ## Installation
 ```
