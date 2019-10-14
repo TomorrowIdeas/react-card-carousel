@@ -1,4 +1,4 @@
-# React Card Carousel
+# React Card Carousel [(Github)](https://github.com/TomorrowIdeas/react-card-carousel)
 A simple React carousel.
 
 ## Installation
