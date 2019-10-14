@@ -55,9 +55,11 @@ class MyCarousel extends Component {
           Fifth Card
         </div>
       </ReactCardCarousel>
-    )
+    );
   }
 }
+
+export default MyCarousel;
 ```
 
 ## Props
