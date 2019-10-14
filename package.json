@@ -23,10 +23,10 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "peerDependencies": {
-        "prop-types": "^15.x",
-        "react": "^16.x",
-        "react-dom": "^16.x",
-        "styled-components": "^4.x"
+        "prop-types": "^15.6.0",
+        "react": "^16.0.0",
+        "react-dom": "^16.0.0",
+        "styled-components": "^4.4.0"
     },
     "devDependencies": {
         "babel-cli": "^6.26.0",
