@@ -1,0 +1,53 @@
+{
+    "name": "react-card-carousel",
+    "version": "0.0.1",
+    "description": "Simple React carousel.",
+    "license": "MIT",
+    "author": {
+        "name": "Joy Hou",
+        "email": "yuejiao.hou@gmail.com",
+        "url": "https://github.com/strawbee"
+    },
+    "keywords": [
+        "React",
+        "simple",
+        "fast",
+        "carousel",
+        "cards"
+    ],
+    "main": "./build/index.js",
+    "scripts": {
+        "start": "webpack --watch",
+        "watch": "webpack-dev-server --inline --hot --port=8005",
+        "build": "webpack",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "peerDependencies": {
+        "prop-types": "^15.x",
+        "react": "^16.x",
+        "react-dom": "^16.x",
+        "styled-components": "^4.x"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.3",
+        "babel-eslint": "^10.0.3",
+        "babel-loader": "^7.1.5",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-plugin-transform-react-jsx": "^6.24.1",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-react": "^6.16.0",
+        "babel-preset-stage-0": "^6.24.1",
+        "css-loader": "^3.2.0",
+        "eslint": "^6.5.1",
+        "path": "^0.12.7",
+        "prop-types": "^15.6.0",
+        "react": "^16.0.0",
+        "react-dom": "^16.0.0",
+        "styled-components": "^4.4.0",
+        "webpack": "^4.5.0",
+        "webpack-cli": "^3.3.9",
+        "webpack-dev-server": "^3.8.2"
+    },
+    "dependencies": {}
+}
