@@ -85,6 +85,7 @@ The methods can be accessed on the `this.Carousel` instance:
 * `this.Carousel.next()`: Sets next card as center card.
 * `this.Carousel.prev()`: Sets previous card as center card.
 * `this.Carousel.goTo(index)`: Sets the specified number index as center card.
+* `this.Carousel.getCurrentIndex()`: Gets current card index.
 
 *NOTE*: If you choose to create the ref using React.createRef() instead of using a callback ref, the methods can be accessed on the `this.Carousel.current` instance.
 

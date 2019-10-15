@@ -58,6 +58,12 @@ class Cards extends Component {
    */
   prev = () => this._cardOnClick(POSITION.PREV);
 
+  /**
+   * @public
+   * Gets current card index
+   */
+  getCurrentIndex = () => this.state.current_index;
+
 
   componentDidMount() {
     const {
