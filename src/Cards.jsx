@@ -162,16 +162,16 @@ class Cards extends Component {
 
     if (position === POSITION.NEXT) {
       if (current_index === React.Children.count(children) - 1) {
-        return this.setState({ current_index: 0 });
+        this.setState({ current_index: 0 });
       }
-      return this.setState({ current_index: current_index + 1 });
+      else this.setState({ current_index: current_index + 1 });
     }
 
-    if (position === POSITION.PREV) {
+    else if (position === POSITION.PREV) {
       if (current_index === 0) {
-        return this.setState({ current_index: React.Children.count(children) - 1 });
+        this.setState({ current_index: React.Children.count(children) - 1 });
       }
-      this.setState({ current_index: current_index - 1 });
+      else this.setState({ current_index: current_index - 1 });
     }
 
     if (this.props.afterChange) this.props.afterChange();
