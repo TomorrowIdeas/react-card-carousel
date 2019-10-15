@@ -165,6 +165,7 @@ class Cards extends Component {
         this.setState({ current_index: 0 });
       }
       else this.setState({ current_index: current_index + 1 });
+      if (this.props.afterChange) this.props.afterChange();
     }
 
     else if (position === POSITION.PREV) {
@@ -172,9 +173,8 @@ class Cards extends Component {
         this.setState({ current_index: React.Children.count(children) - 1 });
       }
       else this.setState({ current_index: current_index - 1 });
+      if (this.props.afterChange) this.props.afterChange();
     }
-
-    if (this.props.afterChange) this.props.afterChange();
   }
 
   /**
