@@ -73,6 +73,7 @@ export default MyCarousel;
 * `disable_fade_in` (Boolean, default: false): Disables initial animation on component render.
 * `autoplay` (Boolean, default: false)
 * `autoplay_speed` (Number, default: 5000): Number in milliseconds.
+* `afterChange` (Function, default: null): After card change function.
 
 ## Methods
 To use any instance methods, you must first create a ref to the ReactCardCarousel instance. Learn more about React refs in the official <a href="https://reactjs.org/docs/refs-and-the-dom.html" target="_blank">documentation</a>.
