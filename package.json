@@ -1,6 +1,6 @@
 {
     "name": "react-card-carousel",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "Simple React carousel.",
     "license": "MIT",
     "author": {
@@ -23,10 +23,10 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "peerDependencies": {
-        "prop-types": "^15.6.0",
-        "react": "^16.0.0",
-        "react-dom": "^16.0.0",
-        "styled-components": "^4.4.0"
+        "prop-types": "^15.*",
+        "react": "^16.*",
+        "react-dom": "^16.*",
+        "styled-components": "^4.*"
     },
     "devDependencies": {
         "babel-cli": "^6.26.0",

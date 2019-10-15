@@ -27,6 +27,7 @@ class Cards extends Component {
     disable_fade_in: PropTypes.bool,
     autoplay: PropTypes.bool,
     autoplay_speed: PropTypes.number,
+    afterChange: PropTypes.func,
   }
 
   static defaultProps = {
@@ -38,13 +39,17 @@ class Cards extends Component {
     disable_fade_in: false,
     autoplay: false,
     autoplay_speed: 5000,
+    afterChange: null,
   }
 
   /**
    * @public
    * Sets current index state
    */
-  goTo = (idx) => this.setState({ current_index: Number(idx) });
+  goTo = (idx) => {
+    this.setState({ current_index: Number(idx) });
+    if (this.props.afterChange) this.props.afterChange();
+  }
 
   /**
    * @public
@@ -63,7 +68,6 @@ class Cards extends Component {
    * Gets current card index
    */
   getCurrentIndex = () => this.state.current_index;
-
 
   componentDidMount() {
     const {
@@ -169,8 +173,13 @@ class Cards extends Component {
       }
       this.setState({ current_index: current_index - 1 });
     }
+
+    if (this.props.afterChange) this.props.afterChange();
   }
 
+  /**
+   * @returns {React.Node}
+   */
   ChildComponents = () => {
     return React.Children.map(
       this.props.children, (child, index) => {
