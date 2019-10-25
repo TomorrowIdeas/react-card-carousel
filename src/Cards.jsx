@@ -47,7 +47,7 @@ class Cards extends Component {
     disable_fade_in: false,
     autoplay: false,
     autoplay_speed: 5000,
-    afterChange: null,
+    afterChange: () => {},
   }
 
   /**
@@ -55,8 +55,7 @@ class Cards extends Component {
    * Sets current index state
    */
   goTo = (idx) => {
-    this.setState({ current_index: Number(idx) });
-    if (this.props.afterChange) this.props.afterChange();
+    this.setState({ current_index: Number(idx) }, this.props.afterChange);
   }
 
   /**
@@ -172,16 +171,14 @@ class Cards extends Component {
       if (current_index === React.Children.count(children) - 1) {
         this.setState({ current_index: 0 });
       }
-      else this.setState({ current_index: current_index + 1 });
-      if (this.props.afterChange) this.props.afterChange();
+      else this.setState({ current_index: current_index + 1 }, this.props.afterChange);
     }
 
     else if (position === POSITION.PREV) {
       if (current_index === 0) {
         this.setState({ current_index: React.Children.count(children) - 1 });
       }
-      else this.setState({ current_index: current_index - 1 });
-      if (this.props.afterChange) this.props.afterChange();
+      else this.setState({ current_index: current_index - 1 }, this.props.afterChange);
     }
   }
 
