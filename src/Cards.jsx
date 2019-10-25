@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Container, Card } from './Styles.jsx';
+import {
+  STYLES,
+  getOpacity,
+  getZIndex,
+  getTransform,
+  getBoxShadow,
+  getCursor,
+} from './styles.js';
 import { POSITION, ALIGNMENT, SPREAD } from './constants.js';
+
 
 /**
  * React Card Carousel
@@ -181,31 +189,37 @@ class Cards extends Component {
    * @returns {React.Node}
    */
   ChildComponents = () => {
+    const { alignment, spread, disable_box_shadow } = this.props;
+
     return React.Children.map(
       this.props.children, (child, index) => {
 
         const position = this._getCardClass(index);
 
         return (
-          <Card
+          <div
             key={ index }
             onClick={ () => this._cardOnClick(position) }
-            position={ position }
-            alignment={ this.props.alignment }
-            spread={ this.props.spread }
-            disable_box_shadow={ this.props.disable_box_shadow }
+            style={{
+              ...STYLES.CARD,
+              opacity: getOpacity(position),
+              zIndex: getZIndex(position),
+              transform: getTransform(position, alignment, spread),
+              boxShadow: getBoxShadow(position, alignment, disable_box_shadow),
+              cursor: getCursor(position, alignment),
+            }}
           >
             { child }
-          </Card>
+          </div>
         );
       });
   }
 
   render() {
     return (
-      <Container>
+      <div style={ STYLES.CONTAINER }>
         <this.ChildComponents />
-      </Container>
+      </div>
     );
   }
 }
