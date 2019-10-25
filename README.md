@@ -14,7 +14,7 @@ Be sure to have all peer dependencies installed as well. React Card Carousel req
 * `react-dom`
 * `prop-types`
 
-## Current Version: 1.0.0-rc.1
+## Current Version: 1.1.0
 * Removed styled-components as a peer dependency
 * Greatly reduced package size
 * Various bug fixes
