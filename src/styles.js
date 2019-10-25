@@ -51,6 +51,8 @@ export function getTransform(position, alignment, spread) {
     if (position === POSITION.PREV) return `translate(-50%, ${ prev }) scale(0.82)`;
     if (position === POSITION.NEXT) return `translate(-50%, ${ next }) scale(0.82)`;
   }
+  if (position === POSITION.HIDDEN) return `translate(-50%, -50%) scale(0.5)`;
+
   return 'translate(-50%, -50%)';
 }
 
