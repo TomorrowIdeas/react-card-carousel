@@ -13,7 +13,11 @@ Be sure to have all peer dependencies installed as well. React Card Carousel req
 * `react`
 * `react-dom`
 * `prop-types`
-* `styled-components`
+
+## Current Version: 1.0.0-rc.1
+* Removed styled-components as a peer dependency
+* Greatly reduced package size
+* Various bug fixes
 
 ## Usage
 Import ReactCardCarousel and use it as a wrapper around card elements. Example:
