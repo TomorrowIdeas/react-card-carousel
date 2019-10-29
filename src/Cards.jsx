@@ -21,7 +21,7 @@ class Cards extends Component {
     super(props);
 
     this.state = {
-      current_index: props.disable_fade_in ? 0 : null,
+      current_index: props.disable_fade_in ? props.initial_index : null,
       interval: null,
     };
   }
