@@ -62,7 +62,11 @@ class Cards extends Component {
    * @public
    * Goes to next card
    */
-  next = () => this._cardOnClick(POSITION.NEXT);
+  next = () => {
+    if (this._is_mounted) {
+      this._cardOnClick(POSITION.NEXT);
+    }
+  }
 
   /**
    * @public
@@ -84,6 +88,8 @@ class Cards extends Component {
       autoplay,
     } = this.props;
 
+    this._is_mounted = true;
+
     // Triggers initial animation
     if (!disable_fade_in) setTimeout(() => {
       this.setState({ current_index: initial_index });
@@ -99,6 +105,7 @@ class Cards extends Component {
   }
 
   componentWillUnmount() {
+    this._is_mounted = false;
     if (!this.props.disable_keydown) document.onkeydown = null;
   }
 

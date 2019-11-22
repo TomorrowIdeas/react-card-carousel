@@ -14,7 +14,8 @@ Be sure to have all peer dependencies installed as well. React Card Carousel req
 * `react-dom`
 * `prop-types`
 
-## Current Version: 1.1.2
+## Current Version: 1.1.3
+* 1.1.3 fixed setState warning on componentWillUnmount
 * Removed styled-components as a peer dependency
 * Greatly reduced package size
 * Various bug fixes
