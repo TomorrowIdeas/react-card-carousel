@@ -125,9 +125,11 @@ class Cards extends Component {
    * Sets interval for advancing cards
    */
   _autoplay = () => {
-    const { autoplay_speed } = this.props;
-    const interval = setInterval(this.next, autoplay_speed);
-    this.setState({ interval });
+    if (this._is_mounted) {
+      const { autoplay_speed } = this.props;
+      const interval = setInterval(this.next, autoplay_speed);
+      this.setState({ interval });
+    }
   }
 
   /**
